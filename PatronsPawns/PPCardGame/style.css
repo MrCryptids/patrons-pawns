@@ -1,0 +1,382 @@
+:root {
+  font-family: Verdana, sans-serif, Inter, system-ui, Avenir, Helvetica, Arial,;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #4a3434;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin:auto;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font: Georgia;
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+h2 {
+  margin: auto;
+}
+
+h4 {
+  margin: auto;
+}
+
+.patrons-area, .player-hand {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: auto;
+}
+
+.famousPlayers {
+  width: 850px;
+  height: auto;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.handLabel {
+  width: 100%;
+  display: none;
+  margin: 0px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: burlywood;
+  border: 2px double;
+  border-color: #000000;
+  border-radius: 10px; /* Rounded corners for a card-like appearance */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.actions button {
+  margin-right: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.descriptorBox {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  width: min-content;
+  height: auto;
+  display: block;
+}
+
+.labelArea {
+top: 2cm;
+text-align: center;
+display: inline-block;
+width: 100%;
+height: 120px;
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: auto;
+margin-right: auto;
+background-image: linear-gradient(to bottom right, #312039, rgb(63, 46, 75));
+border: 2px solid;
+border-color: #000000;
+border-radius: 10px; /* Rounded corners for a card-like appearance */
+position: relative;
+top: 1px;
+}
+
+
+.bold {
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.rules{
+  display: none;
+  background-color: antiquewhite;
+  animation-name: rulesScroll;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  width: 500px;
+  margin: 0px 50px 0px 50px;
+  /*margin: 100px 100px 100px 100px;*/
+  border: 2px solid;
+  border-color: #000000;
+  border-radius: 10px; /* Rounded corners for a card-like appearance */
+  padding-left: 1cm;
+  padding-right: 1cm;
+  padding-bottom: 0.5cm;
+  color: #4a3434;
+}
+
+div {
+  width:auto;
+  margin:auto;
+}
+
+.startgame {
+  animation-name: danceButton;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+  width: 400px;
+  height: 150px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  align-content: center;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+.startgame:hover {
+transition-property: height, width;
+transition-duration: 1s;
+transition-timing-function: linear; 
+height: 640px;
+width: 730px;
+}
+
+.labelbuttons {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  color: antiquewhite;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)
+}
+button:hover {
+  border-color: goldenrod;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.deck {
+  margin: 5px; /* Add space around each card */
+  font-size: 35px; /* Increase the size of the card emoji */
+  line-height: 1.5em; /* Adjust line height for proper vertical spacing */
+  text-align: end;
+  width: auto;
+  height: 50px;
+  display: none;
+  padding: 2px;
+  border: 2px solid #000; /* Black border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #a48e8e; /* Light grey background */
+  cursor: pointer; /* Change cursor on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for interactions */
+}
+
+.deck:hover {
+  transform: translateY(-4px); /* Slight raise effect on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+  background-color: goldenrod;
+}
+
+.player-hand {
+  width: max-content;
+  margin-top: 20px;
+  padding: 2px;
+  border: 2px solid #000; /* Black border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for interactions */
+  display: inline-block;
+  font-size: 150px;
+}
+
+.card {
+  display: inline-block; /* Align cards side by side */
+  margin: 5px; /* Add space around each card */
+  font-size: 6em; /* Increase the size of the card emoji */
+  line-height: 1.5em; /* Adjust line height for proper vertical spacing */
+  text-align: center; /* Center the emoji within the card element */
+  
+  /* Add a border and some padding */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 10px; /* Rounded corners for a card-like appearance */
+  padding: 10px; /* Space around the content inside the border */
+  
+  /* Add a subtle shadow to give a lifted effect */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  /* Background color to distinguish cards from the background */
+  background-color: white;
+
+  /* Transition for interactions */
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+  /* Use user-select to prevent text selection of the emoji */
+  user-select: none;
+
+  /* Use cursor to show it can be interacted with */
+  cursor: pointer;
+}
+
+.card:hover {
+  /* Slightly larger shadow when the card is hovered */
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom right, goldenrod, antiquewhite);
+  /* Lift the card a bit to indicate it's active or can be picked */
+  transform: translateY(-4px);
+  opacity: 75%;
+}
+
+.card.selected {
+  border: 4px solid goldenrod; /* Highlight selected card */
+  transform: translateY(-4px);
+  
+}
+
+
+.patrons {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  padding: 10px;
+  background-color: antiquewhite;
+  display: none;
+}
+
+.actions {
+  display: none;
+  margin: 15px;
+}
+
+#startGameButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Adjust as needed */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)
+}
+
+@keyframes danceButton {
+0% {background-color: #1a1a1a;}
+50% {background-color: darkgoldenrod;}
+100% {background-color: #1a1a1a;}
+}
+
+@keyframes rulesScroll {
+0% {height: 0px; opacity: 0%;}
+/*25% {opacity: 100%;}*/
+100% {height: 780px; opacity: 100%;}
+}
+
+@keyframes patronPulse {
+  0% {font-size: 3em;}
+  100% {font-size: 5em;}
+}
+
+@keyframes statusGlow {
+ 0%{border: 1px double; border-color: goldenrod};
+ 25%{border: 3px solid};
+ 75%{border: 7px solid};
+ 100%{border: 10px double; border-color: goldenrod};
+}
+
+.selected-patron {
+  width: 75px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+  border: #646cff solid 3px;
+}
+
+.patron {
+  font-size: 3em;
+  width: 75px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.patron:hover {
+  animation-name: patronPulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+
+.patrons:hover {
+  font-size: 1em;
+  background-image: linear-gradient(to bottom right, goldenrod, antiquewhite)
+}
+
+.turnStatus {
+  display: none;
+  background-image: linear-gradient(to bottom right, goldenrod, antiquewhite);
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  animation-name: statusGlow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: 3pt double;
+  border-radius: 5px; 
+}
+
+.pawns {
+  background-color: antiquewhite;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  padding: 5px;
+  width: 200px;
+  align-items: start;
+  display: none;
+}
+

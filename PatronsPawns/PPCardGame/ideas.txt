@@ -1,0 +1,9 @@
+Things to implement
+
+- Dropdown list or seperate menu to select optional house rules (i.e Jokers)
+- Make sure that Aces function properly
+- Make sure Score is being tracked
+- Set up final turn rules
+- make Discard pile accessable
+- Set up "Burn first card" rules
+- set up logic to enforce Legal moves before discarding

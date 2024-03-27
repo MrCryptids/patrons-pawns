@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patrons & Pawns</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head> 
+<div class="descriptorBox" id="rulebox"> <body>
+
+  <div class="rules" id="gameRules">
+    <body>
+      <h2>Introduction:</h2>
+      <p>
+        Patrons & Pawns is an engaging strategy game that uses a standard deck of 52 playing cards. The game combines elements of strategy, tact, and diplomacy, where players aim to accumulate the most points through strategic play of cards, representing various medieval roles and ranks. <br>
+      </p>
+      <h4>Game Setup</h4>  
+      <p>
+        - Each player starts with 3 cards in their hand. <br>
+        - The remaining cards are shuffled to form the draw pile. <br>
+        - A single card is burned (placed face down in the discard pile without being revealed) before the game begins. <br>
+      </p>
+      <h4>Game Objective</h4>
+      <p>
+        Accumulate the most points by the end of the game, typically after a set number of turns. The game ends when the last card is drawn and the final turns are completed.
+      </p>
+      <h4>Gameplay</h4>
+      <p>
+        - At the start of each player's turn, they draw 2 cards from the deck. <br>
+        - Players must maintain a maximum hand limit of 4 cards. <br>
+        - Possible moves on a player's turn include playing Kings, Queens, or Jacks as patrons in front of themselves (each worth 20 points), using numbered cards (2 to 10) and Aces to purchase patrons from other players, or using Aces to eliminate a patron in front of another player. <br>
+        - The final turns of the game start when the last card is drawn. Players take their last turns, with the player who drew the last card going first. <br>
+      </p>
+      <h4>Scoring</h4>
+      <p>
+        Points are tallied based on the patrons displayed by each player and points gained from selling patrons to other players. Patrons are worth 20 points each, and pawns (numbered cards) gained during trades are worth their face value.
+      </p>
+      <h4>Winning</h4>
+      <p>
+        The player with the most points at the end of the final turns is declared the winner of the game.
+      </p>
+    </body>
+</div>
+</div>
+</body>
+  </div>
+    <div id="game"> 
+      <div> 
+        <div class="labelArea" id="abovegame"> <div><H1 style="margin: 18px;">♔Patrons & Pawns♙</H1> 
+          <div class="labelbuttons" id="showrules"> Show Rules </div>
+          <div class="labelbuttons"  id="hiderules"> Hide Rules </div>
+          <div class="labelbuttons"  id="houserules"> House Rules </div>
+        </div>
+        </div>
+        <button class="startgame" id="startGameButton"> <h1>Start Game</h1></button>
+      </div>
+
+      <div class="turnStatus" id="statusMessage"> Player 1's turn</div>
+      <div class="handLabel" id="handLabel1"> <h2> Player 1 Hand </h2> </div>
+     
+      <div id="player1">
+        <div class="hand" id="player1Hand"> </div>
+        <div class="patrons" id="player1Patrons"> <p></p></div>
+        <div class="pawns" id="player1PawnsValue"></div>
+    </div>
+    <div class="handLabel" id="handLabel2"> <h2> Player 2 Hand </h2> </div>
+    <div id="player2">
+        <div class="hand" id="player2Hand"></div>
+        <div class="patrons" id="player2Patrons"> <p></p></div>
+        <div class="pawns" id="player2PawnsValue"></div>
+    </div>
+    <div id="discardpile"></div>
+<div class="actions" id="actionButtons">
+    <button id="playPatronButton">Play Patron</button>
+    <button id="purchasePatronButton">Purchase Patron</button>
+    <button id="eliminatePatronButton">Eliminate Patron</button>
+    <button id="endTurnButton"> End Turn</button>
+</div>
+        <div id="deck" class="deck">
+          Draw Card 🂠
+        </div>
+        
+        <script src="game.js"></script>
+    </body>
+
+    </div> <!-- Container for your game -->
+    
+    <script src="game.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
